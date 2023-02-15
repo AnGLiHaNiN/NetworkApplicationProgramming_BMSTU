@@ -1,5 +1,7 @@
 # NetworkApplicationProgramming_BMSTU
 
-<h1 align="center">Hi there, I'm <a href="https://daniilshat.ru/" target="_blank">Mikhail</a> 
-<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h3 align="center">Computer science student, IT news writer from Russia 🇷🇺</h3>
+<h2>First module: <a color="red" href="https://github.com/AnGLiHaNiN/NetworkApplicationProgramming_BMSTU/tree/module_1" target="blank">Here</a></h2>
+
+<h2>Second module: <a color="red" href="https://github.com/AnGLiHaNiN/NetworkApplicationProgramming_BMSTU/tree/module_2" target="blank">Here</a></h2>
+
+<h2>Third module: <a color="red" href="https://github.com/AnGLiHaNiN/NetworkApplicationProgramming_BMSTU/tree/module_3" target="blank">Here</a></h2>
