@@ -11,14 +11,6 @@ window.onload = function(){
     
     // список объектов кнопок циферблата (id которых начинается с btn_digit_)
     digitButtons = document.querySelectorAll('[id ^= "btn_digit_"]')
-    
-    function unaryOperation(){
-
-    }
-
-    function binaryOperation(){
-        
-    }
 
 
     function calculate(){
@@ -53,9 +45,10 @@ window.onload = function(){
     
             outputElement.innerHTML = a
         } else {
+            b = (+a) * (+b) / (100)
             calculate()
-            expressionResult = (+a) / (100)
-            a = expressionResult.toString()
+            // expressionResult = (+a) / (100)
+            // a = expressionResult.toString()
     
             outputElement.innerHTML = a
 
