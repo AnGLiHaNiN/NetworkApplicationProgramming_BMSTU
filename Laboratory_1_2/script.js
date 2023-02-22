@@ -29,26 +29,30 @@ window.onload = function(){
                 break;  
         }
  
-        a = expressionResult.toString()
-        b = ''
-        selectedOperation = null
+        // a = expressionResult.toString()
+        // b = ''
+        // selectedOperation = null
     
          
 
     }
     document.getElementById("btn_op_percent").onclick = function() {
-        if (a === ''){
+        if (a == ''){
             return
-        } else if(a !== '' && b === ''){
+        } else if(a != '' && b == ''){
             expressionResult = (+a) / (100)
             a = expressionResult.toString()
     
             outputElement.innerHTML = a
         } else {
-            b = (+a) * (+b) / (100)
+            //a = (+a) * (+b) / (100)
             calculate()
             // expressionResult = (+a) / (100)
-            // a = expressionResult.toString()
+            //a = expressionResult.toString()
+            a = (expressionResult / 100).toString()
+            //a = expressionResult.toString()
+            b = ''
+            selectedOperation = null
     
             outputElement.innerHTML = a
 
@@ -68,6 +72,16 @@ window.onload = function(){
             }
         }
     }
+
+    function dynamicСomputing() {
+        if (selectedOperation){
+            calculate()
+            a = expressionResult.toString()
+            b = ''
+            selectedOperation = null
+            outputElement.innerHTML = a 
+        } 
+    }
     
     // устанавка колбек-функций на кнопки циферблата по событию нажатия
     digitButtons.forEach(button => {
@@ -76,22 +90,28 @@ window.onload = function(){
             onDigitButtonClicked(digitValue)
         }
     });
+
+    
     
     // установка колбек-функций для кнопок операций
     document.getElementById("btn_op_mult").onclick = function() { 
         if (a === '') return
+        dynamicСomputing()
         selectedOperation = 'x'
     }
     document.getElementById("btn_op_plus").onclick = function() { 
         if (a === '') return
+        dynamicСomputing()
         selectedOperation = '+'
     }
     document.getElementById("btn_op_minus").onclick = function() { 
         if (a === '') return
+        dynamicСomputing()
         selectedOperation = '-'
     }
     document.getElementById("btn_op_div").onclick = function() { 
         if (a === '') return
+        dynamicСomputing()
         selectedOperation = '/'
     }
     
@@ -112,6 +132,9 @@ window.onload = function(){
             return
            
         calculate()
+        a = expressionResult.toString()
+        b = ''
+        selectedOperation = null
         outputElement.innerHTML = a 
     }
     };
