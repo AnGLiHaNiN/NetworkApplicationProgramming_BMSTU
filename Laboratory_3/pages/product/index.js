@@ -10,8 +10,10 @@ export class ProductPage {
 
     getData() {
         return {
-            id: 1,
-            src: "https://i.pinimg.com/originals/c9/ea/65/c9ea654eb3a7398b1f702c758c1c4206.jpg",
+            id: this.id,
+            src: ["https://mobimg.b-cdn.net/v3/fetch/9d/9db2d4683d92f5f2045e9142fbd82633.jpeg?h=1200&r=0.5", 
+            "https://mobimg.b-cdn.net/v3/fetch/af/afc2799799fc6a8525bf2b205111eb8f.jpeg?h=1200&r=0.5",
+             "https://mobimg.b-cdn.net/v3/fetch/76/76aa0386ecd0681229a784b9b27776ed.jpeg?h=1200&r=0.5"],
             title: `Акция ${this.id}`,
             text: "Такой акции вы еще не видели"
         }

@@ -5,6 +5,10 @@ export class ProductCardComponent {
         this.parent = parent;
     }
 
+
+    
+
+    
     getHTML(data) {
         return (
             `
@@ -16,6 +20,7 @@ export class ProductCardComponent {
                         <button class="btn btn-primary" id="click-card-${data.id}" data-id="${data.id}">Нажми на меня</button>
                     </div>
                 </div>
+
             `
         )
     }
